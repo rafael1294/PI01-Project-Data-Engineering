@@ -1,5 +1,7 @@
 #            PROYECTO INDIVIDUAL #1 : DATA ENGINEER 
 
+<p align="center">
+<img src="https://www.esic.edu/sites/default/files/rethink/c7a84832-data-engineer.jpg"  height=250><br><br>
 
 # Descripción del proyecto:
 
@@ -13,34 +15,46 @@ Construir una "API" para poder hacer consultas sobre las plataformas:
 
 - 1: El proceso ETL se ejecuta en el archivo "PI-01.ipynb". <br>
 
-- 2: Los archivos "csv." en la carpeta "Datasets" son leidos y ejecutados por este archivo, luego son transformados y finalmente se genera archivos "csv." dentro de la carpeta "tables".<br><br>
+- 2: Los archivos "csv." en la carpeta "Datasets" son leidos y ejecutados por este archivo, luego son transformados y finalmente se genera archivo "csv." dentro de la carpeta "Tablas".<br><br>
 
 # MySql:
 
-- Importamos las tablas a MySql y realizamos las querys para su comprobación. <br><br>
+<img src="https://www.redeszone.net/app/uploads-redeszone.net/2017/02/mysql-930x452.png"  height=100><br><br>
+
+- Importamos la tabla a MySql y realizamos las querys para su comprobación. <br><br>
 
 # PyMySql:
 
-- Realizamos la conexión con la base de datos "PI" desde python y generamos las consultas para su ejecución en la API.<br><br> 
+- Realizamos la conexión con la base de datos "PI1" desde python y generamos las consultas para su ejecución en la API.<br><br> 
 
-# API:
+# FastAPI:
+
+<img src="https://cdn.sanity.io/images/6icyfeiq/production/e1027869dfe74b69acfcc4616199e50f3df1f52d-2800x1318.png?w=952&q=75&fit=max&auto=format&dpr=1"  height=100><br><br>
 
 - El archivo "main.py" dentro de la carpeta "app" contiene todas las funciones que la aplicación necesita para realizar sus consultas a la base de datos.<br><br>
 
 # Parámetros de la API:
 
-- get_max_duration: <br>
-    Parametros: Año, plataforma y tipo de tiempo("min" o "season")<br>
-    Resultado: Pelicula o serie con mayor duración y cuanto es esta duración.<br>
+- get_word_count: <br>
+    Parametros: "plataforma","palabra"<br>
+    Resultado: Cantidad de títulos que contienen la "palabra" en la "plataforma".<br>
 
-- get_count_plataform: <br>
-        Parametros: Plataforma.<br>
-        Resultado: Cantidad de películas y series de la plataforma seleccionada.<br>
+- get_score count: <br>
+        Parametros: "plataforma","score","año".<br>
+        Resultado: Cantidad de títulos con una puntuación mayor a "score" en el "año" de la "plataforma".<br>
 
-- get_listedin: <br>
-    Parámetros: Género de película o serie.<br>
-    Resultado: Plataforma con más contenido del género seleccionado y su cantidad.<br>
+- get_second_score: <br>
+    Parámetros: "plataforma".<br>
+    Resultado: Segundo título con mayor score ordenado alfabéticamente en la "plataforma".<br>
 
-- get_actor: <br>
-    Parámetros: actor/actriz<br>
-    Resultado: Plataforma en la que más se encuentra el actor/actriz escogido y su cantidad.<br><br>
+- get_longest: <br>
+    Parámetros: "plataforma","min o season","año"<br>
+    Resultado: Título con la mayor duración en "min o season" del "año" en la "plataforma" .<br><br>
+
+- get_rating_count: <br>
+    Parámetros: "rating"<br>
+    Resultado: Cantidad de títulos con "rating" en todas las plataformas.<br><br>
+
+# Comprobación de resultados:
+
+<img src="https://raw.githubusercontent.com/rafael1294/Project-Data-Engineering/main/Images/FastAPI.jpg"  height=300><br><br>
