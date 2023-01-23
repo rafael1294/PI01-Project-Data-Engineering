@@ -65,7 +65,7 @@ def score_count(plataforma,score,year):
     
     cursor.execute("select id_plataform, title, count(*) as cantidad \
         from dftitle\
-        where score > 85 and id_plataform = '"+p+"' and release_year = '"+year+"' and type ='movie'")
+        where score > '"+score+"' and id_plataform = '"+p+"' and release_year = '"+year+"' and type ='movie'")
     
     for dato in cursor:
         a.append(dato)
